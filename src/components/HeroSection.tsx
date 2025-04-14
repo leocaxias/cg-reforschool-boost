@@ -1,24 +1,28 @@
+
 import React from 'react';
-import { Home, Award, TrendingUp } from 'lucide-react';
 import LeadForm from './LeadForm';
+
 const HeroSection = () => {
   return <section className="py-12 md:py-20 bg-white">
       <div className="container px-4 mx-auto">
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center justify-between">
-          <div className="w-full md:w-1/2 space-y-6">
-            <div className="urgency-badge">
-              <span>4 Vagas Restantes para o Mês de Abril</span>
+          <div className="w-full md:w-1/2 space-y-5">
+            {/* Logo added before content */}
+            <div className="mb-4">
+              <img 
+                src="/lovable-uploads/b4e4c455-e1de-41bb-b152-6a641843a527.png" 
+                alt="Rede Alfa Logo" 
+                className="h-24 w-auto" 
+              />
             </div>
             
-            <h1 className="font-nunito font-extrabold text-3xl sm:text-4xl md:text-5xl leading-tight text-tutoring-text">
-              Impulsione o <span className="text-tutoring-orange">Reforço Escolar</span> de Seu Filho
+            <h1 className="font-nunito font-extrabold text-2xl sm:text-3xl md:text-4xl leading-tight text-tutoring-text">
+              Impulsione o Desempenho de Seu Filho com <span className="text-tutoring-orange">Reforço Escolar</span>
             </h1>
             
-            <h2 className="text-xl sm:text-2xl text-gray-700">
+            <h2 className="text-lg sm:text-xl text-gray-700">
               Descubra Quais Assuntos Seu Filho Precisa Revisar para Melhorar as Notas na Escola
             </h2>
-            
-            
             
             <div className="mt-8">
               <LeadForm />
@@ -45,11 +49,19 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="w-full md:w-1/2 mt-8 md:mt-0 flex justify-center items-center">
-            <img src="/lovable-uploads/57dff900-d89d-4bb3-8991-1208e1c7fd8b.png" alt="Professor ajudando aluno em aula de reforço escolar" className="max-w-full h-auto rounded-lg" />
+          <div className="w-full md:w-1/2 mt-8 md:mt-0 flex flex-col items-center justify-center">
+            <div className="relative">
+              <img src="/lovable-uploads/57dff900-d89d-4bb3-8991-1208e1c7fd8b.png" alt="Professor ajudando aluno em aula de reforço escolar" className="max-w-full h-auto rounded-lg" />
+            </div>
+            
+            {/* Urgency badge moved below the image */}
+            <div className="mt-4 urgency-badge text-xs py-1 px-3">
+              <span>4 Vagas Restantes para o Mês de Abril</span>
+            </div>
           </div>
         </div>
       </div>
     </section>;
 };
+
 export default HeroSection;
