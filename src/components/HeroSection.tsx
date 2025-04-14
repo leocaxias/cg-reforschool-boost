@@ -14,7 +14,7 @@ const HeroSection = () => {
             </div>
             
             <h1 className="font-nunito font-extrabold text-3xl sm:text-4xl md:text-5xl leading-tight text-tutoring-text">
-              Impulsione o <span className="text-tutoring-orange">Desempenho Escolar</span> de Seu Filho com Reforço Escolar
+              Impulsione o <span className="text-tutoring-orange">Reforço Escolar</span> de Seu Filho
             </h1>
             
             <h2 className="text-xl sm:text-2xl text-gray-700">
