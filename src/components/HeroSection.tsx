@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Home, Award, TrendingUp } from 'lucide-react';
 import LeadForm from './LeadForm';
-
 const HeroSection = () => {
-  return (
-    <section className="py-12 md:py-20 bg-white">
+  return <section className="py-12 md:py-20 bg-white">
       <div className="container px-4 mx-auto">
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center justify-between">
           <div className="w-full md:w-1/2 space-y-6">
@@ -21,9 +18,7 @@ const HeroSection = () => {
               Descubra Quais Assuntos Seu Filho Precisa Revisar para Melhorar as Notas na Escola
             </h2>
             
-            <p className="text-lg text-gray-600 font-medium">
-              Você está a um clique de turbinar em 100% os estudos do seu filho
-            </p>
+            
             
             <div className="mt-8">
               <LeadForm />
@@ -51,16 +46,10 @@ const HeroSection = () => {
           </div>
           
           <div className="w-full md:w-1/2 mt-8 md:mt-0 flex justify-center items-center">
-            <img 
-              src="/lovable-uploads/57dff900-d89d-4bb3-8991-1208e1c7fd8b.png" 
-              alt="Professor ajudando aluno em aula de reforço escolar" 
-              className="max-w-full h-auto rounded-lg"
-            />
+            <img src="/lovable-uploads/57dff900-d89d-4bb3-8991-1208e1c7fd8b.png" alt="Professor ajudando aluno em aula de reforço escolar" className="max-w-full h-auto rounded-lg" />
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
