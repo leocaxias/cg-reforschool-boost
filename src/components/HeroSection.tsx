@@ -33,14 +33,27 @@ const HeroSection = () => {
               <div className="flex">
                 ★★★★★
               </div>
-              <span className="text-sm text-gray-600">Baseado em 156 avaliações</span>
+              <div className="flex items-center text-sm text-gray-600">
+                <span className="flex items-center gap-1">
+                  Avaliações 
+                  <span className="inline-flex">
+                    <span className="text-[#4285F4]">G</span>
+                    <span className="text-[#EA4335]">o</span>
+                    <span className="text-[#FBBC05]">o</span>
+                    <span className="text-[#4285F4]">g</span>
+                    <span className="text-[#34A853]">l</span>
+                    <span className="text-[#EA4335]">e</span>
+                  </span>
+                </span>
+                <span className="ml-1">• 156 avaliações</span>
+              </div>
             </div>
           </div>
           
           <div className="w-full md:w-1/2 mt-8 md:mt-0 flex justify-center items-center">
             <img 
-              src="/public/lovable-uploads/f4f4f1e4-2fab-4884-b3e1-fdfd28173026.png" 
-              alt="Como funciona o serviço de aulas particulares em domicílio" 
+              src="/lovable-uploads/57dff900-d89d-4bb3-8991-1208e1c7fd8b.png" 
+              alt="Professor ajudando aluno em aula de reforço escolar" 
               className="max-w-full h-auto rounded-lg"
             />
           </div>
