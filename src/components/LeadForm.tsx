@@ -2,14 +2,12 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { useToast } from '@/components/ui/use-toast';
 
 const LeadForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    grade: '',
   });
 
   const { toast } = useToast();
@@ -25,7 +23,7 @@ const LeadForm = () => {
     e.preventDefault();
     
     // Form validation
-    if (!formData.name || !formData.phone || !formData.grade) {
+    if (!formData.name || !formData.phone) {
       toast({
         title: "Erro no formulário",
         description: "Por favor, preencha todos os campos.",
@@ -43,59 +41,38 @@ const LeadForm = () => {
     setFormData({
       name: '',
       phone: '',
-      grade: '',
     });
   };
   
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 bg-white p-6 rounded-xl shadow-md">
-      <div className="space-y-2">
-        <Label htmlFor="name" className="text-tutoring-text font-semibold">Nome do Responsável</Label>
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Input
-          id="name"
           name="name"
-          placeholder="Seu nome completo"
-          className="w-full border-2 border-gray-300 p-3 rounded-lg"
+          placeholder="Nome completo"
+          className="w-full border border-gray-300 rounded-md"
           value={formData.name}
           onChange={handleChange}
         />
-      </div>
-      
-      <div className="space-y-2">
-        <Label htmlFor="phone" className="text-tutoring-text font-semibold">WhatsApp / Telefone</Label>
+        
         <Input
-          id="phone"
           name="phone"
-          placeholder="(67) 99999-9999"
-          className="w-full border-2 border-gray-300 p-3 rounded-lg"
+          placeholder="WhatsApp / Telefone"
+          className="w-full border border-gray-300 rounded-md"
           value={formData.phone}
           onChange={handleChange}
         />
       </div>
       
-      <div className="space-y-2">
-        <Label htmlFor="grade" className="text-tutoring-text font-semibold">Série do Aluno</Label>
-        <Input
-          id="grade"
-          name="grade"
-          placeholder="Ex: 7º ano do fundamental"
-          className="w-full border-2 border-gray-300 p-3 rounded-lg"
-          value={formData.grade}
-          onChange={handleChange}
-        />
-      </div>
+      <Button 
+        type="submit" 
+        className="cta-button w-full bg-blue-600 hover:bg-blue-700"
+      >
+        Agende Sua Avaliação Gratuita
+      </Button>
       
-      <div className="mt-6">
-        <Button 
-          type="submit" 
-          className="cta-button w-full animate-pulse-scale"
-        >
-          Agende Sua Avaliação Gratuita
-        </Button>
-      </div>
-      
-      <div className="text-center text-sm text-gray-500 mt-2">
-        <p>Sem compromisso. Diagnóstico totalmente gratuito.</p>
+      <div className="text-center text-xs text-gray-500">
+        <p>Nunca compartilharemos seus dados com terceiros.</p>
       </div>
     </form>
   );

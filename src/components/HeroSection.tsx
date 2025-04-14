@@ -5,9 +5,9 @@ import LeadForm from './LeadForm';
 
 const HeroSection = () => {
   return (
-    <section className="py-12 md:py-20 bg-tutoring-gray">
+    <section className="py-12 md:py-20 bg-white">
       <div className="container px-4 mx-auto">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center justify-between">
           <div className="w-full md:w-1/2 space-y-6">
             <div className="urgency-badge">
               <span>4 Vagas Restantes para o Mês de Abril</span>
@@ -25,49 +25,24 @@ const HeroSection = () => {
               Você está a um clique de turbinar em 100% os estudos do seu filho
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 md:hidden">
-              <button className="cta-button w-full sm:w-auto">
-                Agende Sua Avaliação Gratuita
-              </button>
+            <div className="mt-8">
+              <LeadForm />
             </div>
-
-            <div className="hidden md:flex flex-col gap-6 mt-8 lg:max-w-xl">
-              <div className="flex items-start gap-4">
-                <div className="bg-tutoring-orange p-2 rounded-full text-white">
-                  <Home size={24} />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">Atendimento Domiciliar</h3>
-                  <p className="text-gray-600">Aulas no conforto da sua casa em Campo Grande-MS</p>
-                </div>
+            
+            <div className="flex items-center gap-2 mt-4">
+              <div className="flex">
+                ★★★★★
               </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="bg-tutoring-orange p-2 rounded-full text-white">
-                  <Award size={24} />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">Professores Especialistas</h3>
-                  <p className="text-gray-600">12 anos de experiência com ensino fundamental e médio</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="bg-tutoring-orange p-2 rounded-full text-white">
-                  <TrendingUp size={24} />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">Método Personalizado</h3>
-                  <p className="text-gray-600">97% dos pais notam diferença em apenas 3 semanas</p>
-                </div>
-              </div>
+              <span className="text-sm text-gray-600">Baseado em 156 avaliações</span>
             </div>
           </div>
           
-          <div className="w-full md:w-1/2 mt-8 md:mt-0">
-            <div className="bg-orange-100 p-1 md:p-3 rounded-xl">
-              <LeadForm />
-            </div>
+          <div className="w-full md:w-1/2 mt-8 md:mt-0 flex justify-center items-center">
+            <img 
+              src="/public/lovable-uploads/f4f4f1e4-2fab-4884-b3e1-fdfd28173026.png" 
+              alt="Como funciona o serviço de aulas particulares em domicílio" 
+              className="max-w-full h-auto rounded-lg"
+            />
           </div>
         </div>
       </div>
