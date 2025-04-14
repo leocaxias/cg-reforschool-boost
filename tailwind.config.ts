@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Tutoring service color scheme
+				tutoring: {
+					orange: '#FF7F00',  
+					yellow: '#FFD700',  
+					red: '#FF4500',     
+					gray: '#F5F5F5',    
+					text: '#333333',    
 				}
+			},
+			fontFamily: {
+				'nunito': ['Nunito', 'sans-serif'],
+				'open-sans': ['Open Sans', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +97,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-scale': {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.05)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-scale': 'pulse-scale 2s infinite'
+			},
+			backgroundImage: {
+				'orange-yellow-gradient': 'linear-gradient(90deg, #FF7F00, #FFD700)',
+				'yellow-orange-gradient': 'linear-gradient(90deg, #FFD700, #FF7F00)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
