@@ -4,7 +4,14 @@ import { Home, Award, TrendingUp } from 'lucide-react';
 
 const BenefitsSection = () => {
   return (
-    <section className="py-12 md:py-20 bg-white">
+    <section className="py-8 md:py-12 bg-white">
+      {/* Price preview added before benefits */}
+      <div className="container px-4 mx-auto text-center mb-8">
+        <h3 className="text-lg md:text-xl text-gray-700">
+          Pacotes mensais a partir de <span className="text-tutoring-orange font-bold">R$ 55,00</span> Reais a Hora/Aula
+        </h3>
+      </div>
+
       <div className="container px-4 mx-auto">
         <h2 className="section-title">Benefícios do Nosso Reforço Escolar</h2>
         

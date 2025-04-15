@@ -4,28 +4,28 @@ import LeadForm from './LeadForm';
 
 const HeroSection = () => {
   return (
-    <section className="py-12 md:py-20 bg-white">
+    <section className="py-8 md:py-12 bg-white">
       <div className="container px-4 mx-auto">
-        {/* Centered logo at the top */}
-        <div className="flex justify-center mb-8">
+        {/* Reduced logo size */}
+        <div className="flex justify-center mb-4">
           <img 
             src="/lovable-uploads/b4e4c455-e1de-41bb-b152-6a641843a527.png" 
             alt="Rede Alfa Logo" 
-            className="h-24 w-auto" 
+            className="h-16 w-auto" 
           />
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center justify-between">
-          <div className="w-full md:w-1/2 space-y-5">
-            <h1 className="font-nunito font-extrabold text-2xl sm:text-3xl md:text-4xl leading-tight text-tutoring-text">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center justify-between">
+          <div className="w-full md:w-1/2 space-y-4">
+            <h1 className="font-nunito font-extrabold text-xl sm:text-2xl md:text-3xl leading-tight text-tutoring-text">
               Impulsione o Desempenho de Seu Filho com <span className="text-tutoring-orange">Reforço Escolar</span>
             </h1>
             
-            <h2 className="text-lg sm:text-xl text-gray-700">
+            <h2 className="text-base sm:text-lg text-gray-700">
               Descubra Quais Assuntos Seu Filho Precisa Revisar para Melhorar as Notas na Escola
             </h2>
             
-            <div className="mt-8">
+            <div className="mt-6">
               <LeadForm />
             </div>
             
@@ -50,7 +50,7 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="w-full md:w-1/2 mt-8 md:mt-0 flex flex-col items-center justify-center">
+          <div className="w-full md:w-1/2 mt-6 md:mt-0 flex flex-col items-center justify-center">
             <div className="relative">
               <img src="/lovable-uploads/57dff900-d89d-4bb3-8991-1208e1c7fd8b.png" alt="Professor ajudando aluno em aula de reforço escolar" className="max-w-full h-auto rounded-lg" />
             </div>
