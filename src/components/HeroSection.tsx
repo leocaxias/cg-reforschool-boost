@@ -3,19 +3,20 @@ import React from 'react';
 import LeadForm from './LeadForm';
 
 const HeroSection = () => {
-  return <section className="py-12 md:py-20 bg-white">
+  return (
+    <section className="py-12 md:py-20 bg-white">
       <div className="container px-4 mx-auto">
+        {/* Centered logo at the top */}
+        <div className="flex justify-center mb-8">
+          <img 
+            src="/lovable-uploads/b4e4c455-e1de-41bb-b152-6a641843a527.png" 
+            alt="Rede Alfa Logo" 
+            className="h-24 w-auto" 
+          />
+        </div>
+
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center justify-between">
           <div className="w-full md:w-1/2 space-y-5">
-            {/* Logo added before content */}
-            <div className="mb-4">
-              <img 
-                src="/lovable-uploads/b4e4c455-e1de-41bb-b152-6a641843a527.png" 
-                alt="Rede Alfa Logo" 
-                className="h-24 w-auto" 
-              />
-            </div>
-            
             <h1 className="font-nunito font-extrabold text-2xl sm:text-3xl md:text-4xl leading-tight text-tutoring-text">
               Impulsione o Desempenho de Seu Filho com <span className="text-tutoring-orange">Reforço Escolar</span>
             </h1>
@@ -54,14 +55,14 @@ const HeroSection = () => {
               <img src="/lovable-uploads/57dff900-d89d-4bb3-8991-1208e1c7fd8b.png" alt="Professor ajudando aluno em aula de reforço escolar" className="max-w-full h-auto rounded-lg" />
             </div>
             
-            {/* Urgency badge moved below the image */}
             <div className="mt-4 urgency-badge text-xs py-1 px-3">
               <span>4 Vagas Restantes para o Mês de Abril</span>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default HeroSection;
